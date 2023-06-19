@@ -1,0 +1,170 @@
+.search-form {
+    display: flex;
+    width: 100%;
+    max-width: 1140px;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 80px 0;
+}
+
+.search-form__search-container {
+    display: grid;
+    grid-template-columns: calc(100% - 80px) 1fr;
+    align-items: center;
+    width: 100%;
+    max-width: 932px;
+}
+
+.search-form__input {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    outline: none;
+    margin: 0;
+    border: 1px solid #E8E8E8;
+    border-radius: 25px;
+    padding: 15px 0;
+    padding-left: 20px;
+    transition: .3s;
+}
+
+.search-form__input::placeholder {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #A0A0A0;
+}
+
+.search-form__input:focus {
+    border-color: #A0A0A0;
+}
+
+.search-form__submit-button {
+    justify-self: end;
+    transition: .3s;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin: 0;
+    padding: 0;
+    margin-right: 7px;
+    outline: none;
+    border: none;
+    width: 34px;
+    height: 34px;
+    background-color: #3456F3;
+    border-radius: 50%;
+    background-image: url('../../images/search-form__icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70%;
+}
+
+.search-form__submit-button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+/*Checkbox */
+
+.search-form__checkbox-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-form__checkbox-label {
+    display: flex;
+    transition: .3s;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: #000000;
+}
+
+.search-form__checkbox-label:hover {
+    cursor: pointer;
+}
+
+.search-form__checkbox {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.search-form__checkbox-custom {
+    margin-left: 14px;
+    position: relative;
+    width: 36px;
+    height: 20px;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 35px;
+}
+
+.search-form__checkbox-custom::before {
+    position: absolute;
+    content: "";
+    top: 47%;
+    left: 4px;
+    transform: translateY(-47%);
+    height: 16px;
+    width: 16px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+.search-form__checkbox:checked+.search-form__checkbox-custom {
+    background-color: #2BE080;
+}
+
+.search-form__checkbox:focus+.search-form__checkbox-custom {
+    box-shadow: 0 0 1px #2BE080;
+}
+
+.search-form__checkbox:checked+.search-form__checkbox-custom::before {
+    left: 48%;
+}
+
+@media screen and (max-width: 1225px) {
+    .search-form {
+        box-sizing: border-box;
+        padding: 80px 30px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+    .search-form {
+        flex-direction: column;
+        align-items: center;
+        gap: 38px;
+        padding: 60px 30px;
+    }
+}
+
+@media screen and (max-width: 755px) {
+    .search-form {
+        padding: 60px 30px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .search-form {
+        padding: 60px 10px;
+        gap: 45px;
+        padding-bottom: 45px;
+    }
+
+
+    .search-form__input::placeholder {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+    .search-form__checkbox-label {
+        font-size: 11px;
+        line-height: 18px;
+    }
+}

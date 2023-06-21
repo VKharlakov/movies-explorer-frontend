@@ -24,7 +24,7 @@ function Main() {
     }
 
     return (
-        <div className='main'>
+        <main className='main'>
             <Header loggedIn={false}/>
             <Promo />
             <NavTab scrollInto={scrollInto} refAboutProject={refAboutProject} refTechs={refTechs} refAboutMe={refAboutMe} />
@@ -33,7 +33,7 @@ function Main() {
             <AboutMe ref={refAboutMe} />
             <Portfolio />
             <Footer />
-        </div>
+        </main>
     )
 }
 

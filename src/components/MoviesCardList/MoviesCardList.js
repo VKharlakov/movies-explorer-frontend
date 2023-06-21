@@ -1,21 +1,22 @@
 import MoviesCard from '../MoviesCard/MoviesCard'
 import './MoviesCardList.css'
 
-function MoviesCardList() {
+function MoviesCardList({isSavedMovies}) {
     return (
-        <div className='movies-card-list__container'>
-            <ul className='movies-card-list'>
-                <li><MoviesCard /></li>
-                <li><MoviesCard /></li>
-                <li><MoviesCard /></li>
-                <li><MoviesCard /></li>
-                <li><MoviesCard /></li>
-                <li><MoviesCard /></li>
-                <li><MoviesCard /></li>
-                <li><MoviesCard /></li>
+        <section className='movies-card-list'>
+            <ul className='movies-card-list__container'>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
+                <li><MoviesCard isSavedMovies={isSavedMovies}/></li>
             </ul>
             <button className='movies-card-list__button'>Еще</button>
-        </div>
+        </section>
     )
 }
 

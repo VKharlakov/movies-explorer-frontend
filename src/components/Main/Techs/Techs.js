@@ -3,7 +3,7 @@ import React from 'react'
 
 function Techs(props, ref) {
     return (
-        <div className='techs' ref={ref}>
+        <section className='techs' ref={ref}>
             <div className='techs__container'>
                 <h2 className='techs__title'>Технологии</h2>
                 <h3 className='techs__subtitle'>7 технологий</h3>
@@ -19,7 +19,7 @@ function Techs(props, ref) {
                     <li className='techs__list-item'>mongoDB</li>
                 </ul>
             </div>
-        </div>
+        </section>
     )
 }
 

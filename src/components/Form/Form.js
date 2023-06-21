@@ -11,12 +11,12 @@ function Form({
     link,
 }) {
     return (
-        <div className="form__container">
+        <div className="form">
             <Link to="/" className="form__logo">
                 <img src={logo} alt="Логотип" />
             </Link>
-            <h3 className="form__title">{title}</h3>
-            <form className="form">
+            <h1 className="form__title">{title}</h1>
+            <form className="form__container">
                 {children}
                 <button type="submit" className='form__submit-button'>
                     {buttonText}

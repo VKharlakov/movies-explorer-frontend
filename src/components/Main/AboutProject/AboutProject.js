@@ -3,7 +3,7 @@ import React from 'react'
 
 function AboutProject(props, ref) {
     return (
-        <div className='about-project' ref={ref}>
+        <section className='about-project' ref={ref}>
             <h2 className='about-project__title'>О проекте</h2>
             <div className='about-project__info-container'>
                 <h3 className='about-project__info-title'>Дипломный проект включал 5 этапов</h3>
@@ -17,7 +17,7 @@ function AboutProject(props, ref) {
                 <p className='about-project__diagramm-text'>1 неделя</p>
                 <p className='about-project__diagramm-text'>4 недели</p>
             </figure>
-        </div>
+        </section>
     )
 }
 

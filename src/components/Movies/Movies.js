@@ -6,12 +6,12 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList.js'
 
 function Movies() {
     return(
-        <div className='movies'>
+        <section className='movies'>
             <Header loggedIn={true}/>
             <SearchForm />
-            <MoviesCardList />
+            <MoviesCardList isSavedMovies={false}/>
             <Footer />
-        </div>
+        </section>
     )
 }
 

@@ -2,7 +2,7 @@ import './Portfolio.css'
 
 function Portfolio() {
     return (
-        <div className='portfolio'>
+        <section className='portfolio'>
             <h2 className='portfolio__title'>Портфолио</h2>
             <div className='portfolio__list'>
                 <a className='portfolio__link' href='https://github.com/VKharlakov/how-to-learn' target='_blank' rel='noreferrer'>
@@ -18,7 +18,7 @@ function Portfolio() {
                     <figure className='portfolio__link-icon'/>
                 </a>
             </div>
-        </div>
+        </section>
     )
 }
 

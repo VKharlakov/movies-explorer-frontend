@@ -18,29 +18,29 @@ function Header({ loggedIn }) {
 
     function authorizedUser() {
         return (
-            <div className="header" style={{backgroundColor: '#fff'}}>
+            <header className="header header_type_authorized">
                 <div className='header__container'>
                     <img className="header__logo" src={authorizedLogo} alt="Логотип"></img>
-                    <div className="header__nav-menu">
+                    <nav className="header__nav-menu">
                         <NavLink className={({isActive}) => isActive ? 'header__nav-link header__nav-link_active' : 'header__nav-link'} to={'/movies'}>Фильмы</NavLink>
                         <NavLink className={({isActive}) => isActive ? 'header__nav-link header__nav-link_active' : 'header__nav-link'} to={'/saved-movies'}>Сохраненные фильмы</NavLink>
                         <div className='header__profile-container'>
-                            <Link className='header__profile-link' to={'/profile'}>
+                            <NavLink className={({isActive}) => isActive ? 'header__profile-link header__profile-link_active' : 'header__profile-link'} to={'/profile'}>
                                 <p className='header__profile-text'>Аккаунт</p>
                                 <figure className='header__profile-icon'/>
-                            </Link>
+                            </NavLink>
                         </div>
-                    </div>
+                    </nav>
                     <button className='header__burger-button' onClick={handleOpen} type='button'/>
                 </div>
                 {isClicked ? <Menu handleClose={handleClose} /> : ''}
-            </div>
+            </header>
         )
     }
 
     function unAuthorizedUser() {
         return (
-            <div className="header" style={{maxWidth: 'unset'}}>
+            <div className="header header_type_unauthorized">
                 <div className='header__container'>
                     <img className="header__logo" src={unAuthorizedLogo} alt="Логотип"></img>
                     <div className="header__nav-menu">

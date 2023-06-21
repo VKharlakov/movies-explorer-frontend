@@ -7,11 +7,11 @@ function NavTab({scrollInto, refAboutProject, refTechs, refAboutMe}) {
     }
 
     return(
-        <div className='navtab'>
+        <nav className='navtab'>
             <button className='navtab__button' onClick={() => handleClick(refAboutProject)}>О проекте</button>
             <button className='navtab__button' onClick={() => handleClick(refTechs)}>Технологии</button>
             <button className='navtab__button' onClick={() => handleClick(refAboutMe)}>Студент</button>
-        </div>
+        </nav>
     )
 }
 

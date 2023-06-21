@@ -5,8 +5,8 @@ function Profile() {
     return (
         <>
             <Header loggedIn={true}/>
-            <div className='profile'>
-                <h2 className='profile__title'>Привет, Виталий!</h2>
+            <section className='profile'>
+                <h1 className='profile__title'>Привет, Виталий!</h1>
                 <form className='profile__form'>
                     <label className='profile__label'>
                         Имя
@@ -21,7 +21,7 @@ function Profile() {
                     <button className='profile__submit-button' type='submit'>Редактировать</button>
                     <button className='profile__logout-button' type='button'>Выйти из аккаунта</button>
                 </form>
-            </div>
+            </section>
         </>
     )
 }

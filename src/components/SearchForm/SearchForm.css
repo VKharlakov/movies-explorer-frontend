@@ -27,6 +27,10 @@
     transition: .3s;
 }
 
+.search-form__input:hover {
+    background-color: #a0a0a03b;
+}
+
 .search-form__input::placeholder {
     margin: 0;
     padding: 0;
@@ -63,6 +67,11 @@
 .search-form__submit-button:hover {
     opacity: .8;
     cursor: pointer;
+}
+
+.search-form__submit-button:focus {
+    outline: 2px solid #2be07f;
+    background-color: #2be07f7e;
 }
 
 /*Checkbox */

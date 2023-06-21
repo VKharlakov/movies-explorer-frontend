@@ -122,6 +122,11 @@
     font-size: 14px;
     line-height: 17px;
     box-sizing: border-box;
+    transition: .3s;
+}
+
+.form__input:hover {
+    background-color: #a0a0a03b;
 }
 
 .form__input:focus {

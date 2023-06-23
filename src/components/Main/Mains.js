@@ -24,16 +24,18 @@ function Main() {
     }
 
     return (
-        <main className='main'>
-            <Header loggedIn={false}/>
-            <Promo />
-            <NavTab scrollInto={scrollInto} refAboutProject={refAboutProject} refTechs={refTechs} refAboutMe={refAboutMe} />
-            <AboutProject ref={refAboutProject} />
-            <Techs ref={refTechs} />
-            <AboutMe ref={refAboutMe} />
-            <Portfolio />
+        <>
+            <Header loggedIn={false} />
+            <main className='main'>
+                <Promo />
+                <NavTab scrollInto={scrollInto} refAboutProject={refAboutProject} refTechs={refTechs} refAboutMe={refAboutMe} />
+                <AboutProject ref={refAboutProject} />
+                <Techs ref={refTechs} />
+                <AboutMe ref={refAboutMe} />
+                <Portfolio />
+            </main>
             <Footer />
-        </main>
+        </>
     )
 }
 

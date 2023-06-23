@@ -53,9 +53,13 @@
 
 .portfolio__link-name {
     margin: 0;
+    max-width: 650px;
     grid-column: 1/2;
     font-weight: 400;
     font-size: 30px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     line-height: 50px;
     letter-spacing: -0.04em;
     color: #000000;
@@ -74,12 +78,16 @@
 }
 
 @media screen and (max-width: 1225px) {
-    .portfolio{
+    .portfolio {
         padding: 0 30px;
         padding-bottom: 115px;
         box-sizing: border-box;
     }
-    
+
+    .portfolio__link-name {
+        max-width: 650px;
+    }
+
 }
 
 @media screen and (max-width: 830px) {
@@ -90,6 +98,7 @@
 
     .portfolio__link-name {
         font-size: 28px;
+        max-width: 400px;
     }
 }
 
@@ -117,6 +126,10 @@
 
     .portfolio__link:not(:last-of-type)::after {
         top: 50px;
+    }
+
+    .portfolio__link-name {
+        max-width: 250px;
     }
 
     .portfolio__link-icon {

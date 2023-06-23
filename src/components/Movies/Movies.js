@@ -5,13 +5,15 @@ import './Movies.css'
 import MoviesCardList from '../MoviesCardList/MoviesCardList.js'
 
 function Movies() {
-    return(
-        <section className='movies'>
-            <Header loggedIn={true}/>
-            <SearchForm />
-            <MoviesCardList isSavedMovies={false}/>
+    return (
+        <>
+            <Header loggedIn={true} />
+            <main className='movies'>
+                <SearchForm />
+                <MoviesCardList isSavedMovies={false} />
+            </main>
             <Footer />
-        </section>
+        </>
     )
 }
 

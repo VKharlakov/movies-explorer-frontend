@@ -4,14 +4,16 @@ import SearchForm from '../SearchForm/SearchForm'
 import MoviesCardList from '../MoviesCardList/MoviesCardList'
 import './SavedMovies.css'
 
-function SavedMovies () {
-    return(
-        <section className='saved-movies'>
-            <Header loggedIn={true}/>
-            <SearchForm />
-            <MoviesCardList isSavedMovies={true}/>
+function SavedMovies() {
+    return (
+        <>
+            <Header loggedIn={true} />
+            <main className='saved-movies'>
+                <SearchForm />
+                <MoviesCardList isSavedMovies={true} />
+            </main>
             <Footer />
-        </section>
+        </>
     )
 }
 

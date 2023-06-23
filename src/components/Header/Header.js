@@ -40,7 +40,7 @@ function Header({ loggedIn }) {
 
     function unAuthorizedUser() {
         return (
-            <div className="header header_type_unauthorized">
+            <header className="header header_type_unauthorized">
                 <div className='header__container'>
                     <img className="header__logo" src={unAuthorizedLogo} alt="Логотип"></img>
                     <div className="header__nav-menu">
@@ -48,7 +48,7 @@ function Header({ loggedIn }) {
                         <Link className="header__nav-link header__nav-link_type_sign-in" to={'/login'}>Войти</Link>
                     </div>
                 </div>
-            </div>
+            </header>
         )
     }
     return (

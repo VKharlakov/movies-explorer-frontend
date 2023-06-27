@@ -1,0 +1,138 @@
+.portfolio {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0;
+    padding-bottom: 115px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portfolio__title {
+    margin: 0;
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #A0A0A0;
+}
+
+.portfolio__list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.portfolio__link {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, max-content);
+    grid-template-rows: max-content;
+    text-decoration: none;
+    transition: .3s;
+    justify-content: space-between;
+}
+
+.portfolio__link:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.portfolio__link:not(:last-of-type)::after {
+    position: absolute;
+
+    content: '';
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #E6E6E6;
+}
+
+.portfolio__link-name {
+    margin: 0;
+    max-width: 650px;
+    grid-column: 1/2;
+    font-weight: 400;
+    font-size: 30px;
+    text-wrap: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 50px;
+    letter-spacing: -0.04em;
+    color: #000000;
+}
+
+.portfolio__link-icon {
+    justify-self: end;
+    margin: 0;
+    margin-top: 8px;
+    grid-column: 2/3;
+    background-image: url('../../../images/portfolio__icon.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    width: 20px;
+}
+
+@media screen and (max-width: 1225px) {
+    .portfolio {
+        padding: 0 30px;
+        padding-bottom: 115px;
+        box-sizing: border-box;
+    }
+
+    .portfolio__link-name {
+        max-width: 650px;
+    }
+
+}
+
+@media screen and (max-width: 830px) {
+    .portfolio {
+        padding: 0 50px;
+        padding-bottom: 90px;
+    }
+
+    .portfolio__link-name {
+        font-size: 28px;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .portfolio__link-name {
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .portfolio {
+        padding: 0 14px;
+        padding-bottom: 70px;
+    }
+
+    .portfolio__title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .portfolio__list {
+        margin-top: 40px;
+    }
+
+    .portfolio__link:not(:last-of-type)::after {
+        top: 50px;
+    }
+
+    .portfolio__link-name {
+        max-width: 250px;
+    }
+
+    .portfolio__link-icon {
+        background-size: 60%;
+    }
+}

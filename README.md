@@ -1,5 +1,1 @@
-# Репозиторий фронтенда Bitfilms
-
-Этот репозиторий является частью фронтенда для проекта Bitfilms, который представляет собой сервис для подбора случайных фильмов и сохранения их в профиле пользователя.
-
-*WORK IN PROGRESS*
+Ссылка на макет https://www.figma.com/file/4I2m9DT4420OCcwEC9pUcB/Diploma-(Copy)?type=design&node-id=344-0&t=hdnoh8KNPpp4oHDY-0

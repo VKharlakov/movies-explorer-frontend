@@ -9,29 +9,31 @@ function Header({ loggedIn }) {
     const [isClicked, setIsClicked] = React.useState(false);
 
     function handleOpen() {
-      setIsClicked(true);
+        setIsClicked(true);
     }
-  
+
     function handleClose() {
-      setIsClicked(false);
+        setIsClicked(false);
     }
 
     function authorizedUser() {
         return (
             <header className="header header_type_authorized">
                 <div className='header__container'>
-                    <img className="header__logo" src={authorizedLogo} alt="Логотип"></img>
+                    <Link to={'/'}>
+                        <img className="header__logo" src={authorizedLogo} alt="Логотип"></img>
+                    </Link>
                     <nav className="header__nav-menu">
-                        <NavLink className={({isActive}) => isActive ? 'header__nav-link header__nav-link_active' : 'header__nav-link'} to={'/movies'}>Фильмы</NavLink>
-                        <NavLink className={({isActive}) => isActive ? 'header__nav-link header__nav-link_active' : 'header__nav-link'} to={'/saved-movies'}>Сохраненные фильмы</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? 'header__nav-link header__nav-link_active' : 'header__nav-link'} to={'/movies'}>Фильмы</NavLink>
+                        <NavLink className={({ isActive }) => isActive ? 'header__nav-link header__nav-link_active' : 'header__nav-link'} to={'/saved-movies'}>Сохраненные фильмы</NavLink>
                         <div className='header__profile-container'>
-                            <NavLink className={({isActive}) => isActive ? 'header__profile-link header__profile-link_active' : 'header__profile-link'} to={'/profile'}>
+                            <NavLink className={({ isActive }) => isActive ? 'header__profile-link header__profile-link_active' : 'header__profile-link'} to={'/profile'}>
                                 <p className='header__profile-text'>Аккаунт</p>
-                                <figure className='header__profile-icon'/>
+                                <figure className='header__profile-icon' />
                             </NavLink>
                         </div>
                     </nav>
-                    <button className='header__burger-button' onClick={handleOpen} type='button'/>
+                    <button className='header__burger-button' onClick={handleOpen} type='button' />
                 </div>
                 {isClicked ? <Menu handleClose={handleClose} /> : ''}
             </header>
@@ -44,7 +46,7 @@ function Header({ loggedIn }) {
                 <div className='header__container'>
                     <img className="header__logo" src={unAuthorizedLogo} alt="Логотип"></img>
                     <div className="header__nav-menu">
-                        <Link className="header__nav-link header__nav-link_type_sign-up" style={{color: '#fff'}} to={'/register'}>Регистрация</Link>
+                        <Link className="header__nav-link header__nav-link_type_sign-up" style={{ color: '#fff' }} to={'/register'}>Регистрация</Link>
                         <Link className="header__nav-link header__nav-link_type_sign-in" to={'/login'}>Войти</Link>
                     </div>
                 </div>

@@ -1,6 +1,31 @@
+import { useNavigate } from 'react-router-dom';
+import { useFormWithValidation } from '../../utils/utils.js';
 import Form from '../Form/Form.js';
+import React from 'react';
 
-function Login() {
+function Login({ handleLogin }) {
+  const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation()
+  const navigate = useNavigate()
+
+  function handleSubmit(event) {
+    event.preventDefault()
+    handleLogin({
+      email: values.email,
+      password: values.password
+    })
+  }
+
+  React.useEffect(() => {
+    resetForm()
+  }, [resetForm])
+
+  React.useEffect(() => {
+    const jwt = localStorage.getItem('jwt')
+    if(jwt) {
+      navigate('/movies')
+    }
+  }, [])
+
   return (
     <main>
       <Form
@@ -8,7 +33,10 @@ function Login() {
         buttonText="Войти"
         question="Еще не зарегистрированы?"
         linkText=" Регистрация"
-        link="/register">
+        link="/register"
+        onSubmit={handleSubmit}
+        isDisabled={!isValid}
+        >
         <label className="form__label">
           E-mail
           <input
@@ -17,8 +45,10 @@ function Login() {
             className="form__input"
             type="email"
             required
+            onChange={handleChange}
+            value={values.email || ''}
           />
-          <span className="form__input-error"></span>
+          <span className="form__input-error">{errors.email}</span>
         </label>
         <label className="form__label">
           Пароль
@@ -28,8 +58,10 @@ function Login() {
             className="form__input"
             type="password"
             required
+            onChange={handleChange}
+            value={values.password || ''}
           />
-          <span className="form__input-error">Тестовая ошибка</span>
+          <span className="form__input-error">{errors.password}</span>
         </label>
       </Form>
     </main>

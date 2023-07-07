@@ -3,7 +3,7 @@ import Header from '../Header/Header'
 import './Profile.css'
 import CurrentUserContext from '../../contexts/CurrentUserContext'
 import { useFormWithValidation } from '../../utils/utils'
-import { USER_NAME_REGEX } from '../../utils/constants'
+import { USER_EMAIL_REGEX, USER_NAME_REGEX } from '../../utils/constants'
 
 function Profile({handleProfile, handleSignOut, loggedIn}) {
     const currentUser = React.useContext(CurrentUserContext)
@@ -50,6 +50,7 @@ function Profile({handleProfile, handleSignOut, loggedIn}) {
                         className='profile__input' 
                         name='email' 
                         type='email'
+                        pattern={USER_EMAIL_REGEX}
                         required
                         onChange={handleChange}
                         value={values.email || ''}/>

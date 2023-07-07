@@ -1,4 +1,5 @@
 export const USER_NAME_REGEX = '^[a-zA-Zа-яА-ЯёЁ\\s\\-]+$';
+export const USER_EMAIL_REGEX = "^[a-zA-Z0-9._%+\\-]+@(?!.*\\.\\.)[a-zA-Z0-9.\\-]+\\.[a-zA-Z]{2,}$"
 
 export const BASE_URL = 'https://bitfilms.kharlakov.api.nomoredomains.rocks';
 export const MOVIES_URL = 'https://api.nomoreparties.co/beatfilm-movies';

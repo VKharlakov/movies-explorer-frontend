@@ -1,5 +1,5 @@
 import React from 'react';
-import { USER_NAME_REGEX } from '../../utils/constants';
+import { USER_EMAIL_REGEX, USER_NAME_REGEX } from '../../utils/constants';
 import { useFormWithValidation } from '../../utils/utils';
 import Form from '../Form/Form';
 
@@ -55,6 +55,7 @@ function Register({ handleRegister }) {
             type="email"
             required
             onChange={handleChange}
+            pattern={USER_EMAIL_REGEX}
             value={values.email || ''}
           />
           <span className="form__input-error">{errors.email}</span>

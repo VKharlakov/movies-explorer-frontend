@@ -2,6 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import { useFormWithValidation } from '../../utils/utils.js';
 import Form from '../Form/Form.js';
 import React from 'react';
+import { USER_EMAIL_REGEX } from '../../utils/constants.js';
 
 function Login({ handleLogin }) {
   const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation()
@@ -44,6 +45,7 @@ function Login({ handleLogin }) {
             name="email"
             className="form__input"
             type="email"
+            pattern={USER_EMAIL_REGEX}
             required
             onChange={handleChange}
             value={values.email || ''}

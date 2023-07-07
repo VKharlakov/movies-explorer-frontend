@@ -33,16 +33,13 @@ function Movies({ setIsLoader, setIsInfoTooltip, loggedIn, savedMoviesList, onLi
         setFilteredMovies(
             shortMoviesCheckbox ? filterShortMovies(moviesList) : moviesList
         );
-        localStorage.setItem(
-            `${currentUser.email} - movies`,
-            JSON.stringify(moviesList)
-        );
+        localStorage.setItem(`movies`, JSON.stringify(moviesList));
     }
 
     // Поиск по запросу
     function handleSearchSubmit(inputValue) {
-        localStorage.setItem(`${currentUser.email} - movieSearch`, inputValue);
-        localStorage.setItem(`${currentUser.email} - shortMovies`, shortMovies);
+        localStorage.setItem(`movieSearch`, inputValue);
+        localStorage.setItem(`shortMovies`, shortMovies);
         if (isAllMovies.length === 0) {
             setIsLoader(true);
             moviesApi
@@ -67,17 +64,17 @@ function Movies({ setIsLoader, setIsInfoTooltip, loggedIn, savedMoviesList, onLi
     // Состояние чекбокса
     function handleShortFilms(inputValue) {
         setShortMovies(!shortMovies);
-        if(!shortMovies) {
+        if (!shortMovies) {
             setFilteredMovies(filterShortMovies(initialMovies))
         } else {
             setFilteredMovies(initialMovies)
         }
-        localStorage.setItem(`${currentUser.email} - shortMovies`, !shortMovies);
+        localStorage.setItem(`shortMovies`, !shortMovies);
     }
 
     // Проверка чекбокса в локальном хранилище при заходе на страницу
     React.useEffect(() => {
-        if (localStorage.getItem(`${currentUser.email} - shortMovies`) === 'true') {
+        if (localStorage.getItem(`shortMovies`) === 'true') {
             setShortMovies(true);
         } else {
             setShortMovies(false);
@@ -86,13 +83,13 @@ function Movies({ setIsLoader, setIsInfoTooltip, loggedIn, savedMoviesList, onLi
 
     // Рендер фильмов из локального хранилища
     React.useEffect(() => {
-        if (localStorage.getItem(`${currentUser.email} - movies`)) {
+        if (localStorage.getItem(`movies`)) {
             const movies = JSON.parse(
-                localStorage.getItem(`${currentUser.email} - movies`)
+                localStorage.getItem(`movies`)
             );
             setInitialMovies(movies);
             if (
-                localStorage.getItem(`${currentUser.email} - shortMovies`) === 'true'
+                localStorage.getItem(`shortMovies`) === 'true'
             ) {
                 setFilteredMovies(filterShortMovies(movies));
             } else {

@@ -30,8 +30,8 @@ function SearchForm({ handleSearchSubmit, handleShortFilms, shortMovies, setIsIn
     }, [isValid]);
 
     React.useEffect(() => {
-        if (location.pathname === '/movies' && localStorage.getItem(`${currentUser.email} - movieSearch`)) {
-            const searchValue = localStorage.getItem(`${currentUser.email} - movieSearch`);
+        if (location.pathname === '/movies' && localStorage.getItem(`movieSearch`)) {
+            const searchValue = localStorage.getItem(`movieSearch`);
             values.search = searchValue;
             setIsValid(true);
         }

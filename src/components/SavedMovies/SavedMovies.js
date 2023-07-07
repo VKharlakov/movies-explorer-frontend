@@ -35,12 +35,12 @@ function SavedMovies({ onDelete, loggedIn, savedMoviesList, setIsInfoTooltip }) 
     function handleShortFilms() {
         if (!shortMovies) {
             setShortMovies(true);
-            localStorage.setItem(`${currentUser.email} - shortSavedMovies`, true);
+            localStorage.setItem(`shortSavedMovies`, true);
             setShowedMovies(filterShortMovies(filteredMovies));
             filterShortMovies(filteredMovies).length === 0 ? setNotFound(true) : setNotFound(false);
         } else {
             setShortMovies(false);
-            localStorage.setItem(`${currentUser.email} - shortSavedMovies`, false);
+            localStorage.setItem(`shortSavedMovies`, false);
             filteredMovies.length === 0 ? setNotFound(true) : setNotFound(false);
             setShowedMovies(filteredMovies);
         }
@@ -48,7 +48,7 @@ function SavedMovies({ onDelete, loggedIn, savedMoviesList, setIsInfoTooltip }) 
 
     // Проверка чекбокса в локальном хранилище
     React.useEffect(() => {
-        if (localStorage.getItem(`${currentUser.email} - shortSavedMovies`) === 'true') {
+        if (localStorage.getItem(`shortSavedMovies`) === 'true') {
             setShortMovies(true);
             setShowedMovies(filterShortMovies(savedMoviesList));
         } else {

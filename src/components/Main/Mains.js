@@ -9,7 +9,7 @@ import Portfolio from './Portfolio/Portfolio'
 import Header from '../Header/Header'
 import Footer from '../Footer/Footer'
 
-function Main() {
+function Main({ loggedIn }) {
     let refAboutProject = React.useRef()
     let refTechs = React.useRef()
     let refAboutMe = React.useRef()
@@ -25,7 +25,7 @@ function Main() {
 
     return (
         <>
-            <Header loggedIn={false} />
+            <Header loggedIn={loggedIn} />
             <main className='main'>
                 <Promo />
                 <NavTab scrollInto={scrollInto} refAboutProject={refAboutProject} refTechs={refTechs} refAboutMe={refAboutMe} />

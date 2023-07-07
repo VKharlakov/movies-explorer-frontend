@@ -219,7 +219,7 @@ function App() {
     <CurrentUserContext.Provider value={currentUser}>
       <section className="app">
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={<Main loggedIn={loggedIn}/>} />
           <Route path='/register' element={
             <Register handleRegister={handleRegister} />
           }

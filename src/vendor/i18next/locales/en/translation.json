@@ -1,0 +1,78 @@
+{
+    "header": {
+        "register": "Sign up",
+        "login": "Log in",
+        "movies": "Movies",
+        "savedMovies": "Saved movies",
+        "account": "Account",
+        "mainPage": "Home"
+    },
+    "footer": {
+        "title": "Diploma project Yandex.Praktikum",
+        "linkYandex": "Yandex.Praktikum"
+    },
+    "form": {
+        "password": "Password",
+        "welcomeTitle": "Welcome back!",
+        "registerTitle": "Welcome!",
+        "noAccount": "Don't have an account? ",
+        "enterEmail": "Enter email",
+        "enterPassword": "Enter password",
+        "registerButton": "Sign me up",
+        "haveAccount": "Already have an account? ",
+        "enterName": "Enter name",
+        "name": "Name"
+    },
+    "searchForm": {
+        "checkboxLabel": "Short films"
+    },
+    "errors": {
+        "keyWord": "A key word is missing",
+        "notFound": "Nothing was found",
+        "notFoundPage": "Page doesn't exist",
+        "serverError": "Something went wrong on a server. Check the Internet connection and try again later"
+    },
+    "profile": {
+        "greeting": "Hello",
+        "logout": "Logout",
+        "edit": "Edit profile",
+        "success": "Profile has been updated"
+    },
+    "movies": {
+        "more": "More"
+    },
+    "aboutMe": {
+        "title": "Student",
+        "name": "Vitaly",
+        "brief": "Frontend developer, 23 y.o",
+        "bio": "I graduated from a linguistic university in Moscow, then moved to Belgrade, Serbia, and started to study web development in JavaScript. I successfully completed my studies and got my diploma, and at the moment I am looking for a project where I can apply my acquired skills and knowledge. Not only that, but I'm the proud owner of a fat cat and a very good dog. My hobbies are tennis, running, and reading."
+    },
+    "aboutProject": {
+        "title": "About the project",
+        "infoTitle1": "The diploma project consisted of 5 stages",
+        "infoText1": "Making a plan, working on the backend, layout, adding functionality, and final tweaks.",
+        "infoTitle2": "The diploma took five weeks to complete",
+        "infoText2": "Each stage had soft and hard deadlines that had to be met in order to successfully defend the project.",
+        "week1": "1 week",
+        "week2": "4 weeks"
+    },
+    "navTab": {
+        "aboutProject": "About the project",
+        "techs": "Techs applied",
+        "student": "Student"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "static": "Static page",
+        "adaptive": "Adaptive page",
+        "spa": "Single page application"
+    },
+    "promo": {
+        "title": "Web development student's diploma project."
+    },
+    "techs": {
+        "title": "Technologies",
+        "subtitle": "7 techs",
+        "brief": "In the web development course, we learned the techniques that we applied to our diploma project."
+    }
+}

@@ -4,6 +4,7 @@ import { DEVICE_PARAMS } from '../../utils/constants'
 import MoviesCard from '../MoviesCard/MoviesCard'
 import './MoviesCardList.css'
 import { useLocation } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 function MoviesCardList({ isSavedMovies, moviesList, savedMoviesList, onLike, onDelete }) {
     const screenWidth = useScreenWidth()
@@ -12,6 +13,9 @@ function MoviesCardList({ isSavedMovies, moviesList, savedMoviesList, onLike, on
     const [isMount, setIsMount] = React.useState(true)
     const [showMovieList, setShowMovieList] = React.useState([])
     const [cardsShowDetails, setCardsShowDetails] = React.useState({ total: 12, more: 3 })
+
+    //Translation
+    const { t } = useTranslation()
 
     // Изменение количества карточек при разной ширине экрана
     React.useEffect(() => {
@@ -68,7 +72,7 @@ function MoviesCardList({ isSavedMovies, moviesList, savedMoviesList, onLike, on
             {location.pathname === '/movies' && showMovieList.length >= 5 && showMovieList.length < moviesList.length && (
                 <button
                     className='movies-card-list__button'
-                    onClick={handleClickMoreMovies}>Еще</button>
+                    onClick={handleClickMoreMovies}>{t('movies.more')}</button>
             )}
         </section>
     )

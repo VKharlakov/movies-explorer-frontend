@@ -3,6 +3,7 @@ import './SearchForm.css'
 import CurrentUserContext from '../../contexts/CurrentUserContext'
 import { useLocation } from 'react-router-dom'
 import { useFormWithValidation } from '../../utils/utils'
+import { useTranslation } from 'react-i18next'
 
 function SearchForm({ handleSearchSubmit, handleShortFilms, shortMovies, setIsInfoTooltip }) {
     const currentUser = React.useContext(CurrentUserContext)
@@ -11,16 +12,19 @@ function SearchForm({ handleSearchSubmit, handleShortFilms, shortMovies, setIsIn
 
     const [errorQuery, setErrorQuery] = React.useState('')
 
+    //Translation
+    const { t } = useTranslation()
+
     function handleSubmit(event) {
         event.preventDefault();
         if(isValid && values.search.trim() !== '') {
             handleSearchSubmit(values.search)
         } else {
-            setErrorQuery('Необходимо ввести ключевое слово.');
+            setErrorQuery(t('errors.keyWord'));
             setIsInfoTooltip({
                 isOpen: true,
                 successful: false,
-                text: 'Необходимо ввести ключевое слово.',
+                text: t('errors.keyWord'),
             });
          } 
     };
@@ -43,7 +47,7 @@ function SearchForm({ handleSearchSubmit, handleShortFilms, shortMovies, setIsIn
                 <input 
                 className='search-form__input' 
                 type='text' 
-                placeholder={ errorQuery ||'Фильм'}
+                placeholder={ errorQuery || t('header.movies')}
                 name='search'
                 onChange={handleChange}
                 value={values.search || ''}
@@ -52,7 +56,7 @@ function SearchForm({ handleSearchSubmit, handleShortFilms, shortMovies, setIsIn
             </div>
             <div className='search-form__checkbox-container'>
                 <label className='search-form__checkbox-label'>
-                    Короткометражки
+                    {t('searchForm.checkboxLabel')}
                     <input 
                     className='search-form__checkbox' 
                     type='checkbox' 

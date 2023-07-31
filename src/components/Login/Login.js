@@ -3,10 +3,14 @@ import { useFormWithValidation } from '../../utils/utils.js';
 import Form from '../Form/Form.js';
 import React from 'react';
 import { USER_EMAIL_REGEX } from '../../utils/constants.js';
+import { useTranslation } from 'react-i18next';
 
 function Login({ handleLogin }) {
   const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation()
   const navigate = useNavigate()
+
+  //Translation
+  const { t } = useTranslation()
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -30,10 +34,10 @@ function Login({ handleLogin }) {
   return (
     <main>
       <Form
-        title="Рады видеть!"
-        buttonText="Войти"
-        question="Еще не зарегистрированы?"
-        linkText=" Регистрация"
+        title={t('form.welcomeTitle')}
+        buttonText={t('header.login')}
+        question={t('form.noAccount')}
+        linkText={t('header.register')}
         link="/register"
         onSubmit={handleSubmit}
         isDisabled={!isValid}
@@ -41,7 +45,7 @@ function Login({ handleLogin }) {
         <label className="form__label">
           E-mail
           <input
-            placeholder='Введите Вашу почту'
+            placeholder={t('form.enterEmail')}
             name="email"
             className="form__input"
             type="email"
@@ -53,9 +57,9 @@ function Login({ handleLogin }) {
           <span className="form__input-error">{errors.email}</span>
         </label>
         <label className="form__label">
-          Пароль
+          {t('form.password')}
           <input
-            placeholder='Введите Ваш пароль'
+            placeholder={t('form.enterPassword')}
             name="password"
             className="form__input"
             type="password"

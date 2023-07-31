@@ -7,6 +7,7 @@ import MoviesCardList from '../MoviesCardList/MoviesCardList.js'
 import React from 'react'
 import CurrentUserContext from '../../contexts/CurrentUserContext.js'
 import { filterMovies, filterShortMovies, transformMovies } from '../../utils/utils.js'
+import { useTranslation } from 'react-i18next'
 
 function Movies({ setIsLoader, setIsInfoTooltip, loggedIn, savedMoviesList, onLike, onDelete }) {
     const currentUser = React.useContext(CurrentUserContext)
@@ -16,6 +17,9 @@ function Movies({ setIsLoader, setIsInfoTooltip, loggedIn, savedMoviesList, onLi
     const [isAllMovies, setIsAllMovies] = React.useState([]);
     const [shortMovies, setShortMovies] = React.useState(false);
 
+    //Translation
+    const { t } = useTranslation()
+
     // Поиск по массиву и установка состояния
     function handleSetFilteredMovies(movies, userQuery, shortMoviesCheckbox) {
         const moviesList = filterMovies(movies, userQuery, false);
@@ -23,7 +27,7 @@ function Movies({ setIsLoader, setIsInfoTooltip, loggedIn, savedMoviesList, onLi
             setIsInfoTooltip({
                 isOpen: true,
                 successful: false,
-                text: 'Ничего не было найдено.',
+                text: t('errors.notFound'),
             });
             setNotFound(true);
         } else {
@@ -52,7 +56,7 @@ function Movies({ setIsLoader, setIsInfoTooltip, loggedIn, savedMoviesList, onLi
                     setIsInfoTooltip({
                         isOpen: true,
                         successful: false,
-                        text: 'Во время запроса произошла ошибка. Возможно, проблема с соединением или сервер недоступен. Подождите немного и попробуйте ещё раз.',
+                        text: t('errors.serverError'),
                     })
                 )
                 .finally(() => setIsLoader(false));

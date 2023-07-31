@@ -6,6 +6,7 @@ import './SavedMovies.css'
 import React from 'react'
 import CurrentUserContext from '../../contexts/CurrentUserContext'
 import { filterMovies, filterShortMovies } from '../../utils/utils'
+import { useTranslation } from 'react-i18next'
 
 function SavedMovies({ onDelete, loggedIn, savedMoviesList, setIsInfoTooltip }) {
     const currentUser = React.useContext(CurrentUserContext)
@@ -13,6 +14,9 @@ function SavedMovies({ onDelete, loggedIn, savedMoviesList, setIsInfoTooltip }) 
     const [NotFound, setNotFound] = React.useState(false)
     const [showedMovies, setShowedMovies] = React.useState(savedMoviesList)
     const [filteredMovies, setFilteredMovies] = React.useState(showedMovies)
+
+    //Translate
+    const { t } = useTranslation()
 
     // Поиск фильма по запросу
     function handleSearchSubmit(inputValue) {
@@ -22,7 +26,7 @@ function SavedMovies({ onDelete, loggedIn, savedMoviesList, setIsInfoTooltip }) 
             setIsInfoTooltip({
                 isOpen: true,
                 successful: false,
-                text: 'Ничего не найдено.',
+                text: t('errors.notFound'),
             });
         } else {
             setNotFound(false);

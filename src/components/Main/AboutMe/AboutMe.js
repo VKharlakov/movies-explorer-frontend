@@ -1,17 +1,20 @@
 import './AboutMe.css'
 import React from 'react'
 import photo from '../../../images/about-me__photo.png'
+import { useTranslation } from 'react-i18next'
 
 function AboutMe(props, ref) {
+    //Translation
+    const { t } = useTranslation()
+
     return (
         <section className='about-me' ref={ref}>
-            <h2 className='about-me__title'>Студент</h2>
+            <h2 className='about-me__title'>{t('aboutMe.title')}</h2>
             <div className='about-me__info-container'>
                 <div className='about-me__text-container'>
-                    <p className='about-me__name'>Виталий</p>
-                    <p className='about-me__brief'>Фронтенд-разработчик, 30 лет</p>
-                    <p className='about-me__bio'>Я родился и живу в Саратове, закончил факультет экономики СГУ. У меня есть жена
-                        и дочь. Я люблю слушать музыку, а ещё увлекаюсь бегом. Недавно начал кодить. С 2015 года работал в компании «СКБ Контур». После того, как прошёл курс по веб-разработке, начал заниматься фриланс-заказами и ушёл с постоянной работы.</p>
+                    <p className='about-me__name'>{t('aboutMe.name')}</p>
+                    <p className='about-me__brief'>{t('aboutMe.brief')}</p>
+                    <p className='about-me__bio'>{t('aboutMe.bio')}</p>
                 </div>
                 <img className='about-me__photo' src={photo} alt='Фото студента' />
             </div>

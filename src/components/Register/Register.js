@@ -2,9 +2,13 @@ import React from 'react';
 import { USER_EMAIL_REGEX, USER_NAME_REGEX } from '../../utils/constants';
 import { useFormWithValidation } from '../../utils/utils';
 import Form from '../Form/Form';
+import { useTranslation } from 'react-i18next';
 
 function Register({ handleRegister }) {
   const { values, handleChange, errors, isValid, resetForm } = useFormWithValidation()
+
+  //Translation
+  const { t } = useTranslation()
 
   function handleSubmit(event) {
     event.preventDefault()
@@ -22,18 +26,18 @@ function Register({ handleRegister }) {
   return (
     <main>
       <Form
-        title="Добро пожаловать!"
-        buttonText="Зарегистрироваться"
-        question="Уже зарегистрированы?"
-        linkText=" Войти"
+        title={t('form.registerTitle')}
+        buttonText={t('form.registerButton')}
+        question={t('form.haveAccount')}
+        linkText={t('header.login')}
         link="/login"
         onSubmit={handleSubmit}
         isDisabled={!isValid}
       >
         <label className="form__label">
-          Имя
+          {t('form.name')}
           <input
-            placeholder='Введите Ваше имя'
+            placeholder={t('form.enterName')}
             name="name"
             className="form__input"
             type="text"
@@ -49,7 +53,7 @@ function Register({ handleRegister }) {
         <label className="form__label">
           E-mail
           <input
-            placeholder='Введите Вашу почту'
+            placeholder={t('form.enterEmail')}
             name="email"
             className="form__input"
             type="email"
@@ -61,9 +65,9 @@ function Register({ handleRegister }) {
           <span className="form__input-error">{errors.email}</span>
         </label>
         <label className="form__label">
-          Пароль
+          {t('form.password')}
           <input
-            placeholder='Введите Ваш пароль'
+            placeholder={t('form.enterPassword')}
             name="password"
             className="form__input"
             type="password"

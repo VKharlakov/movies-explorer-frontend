@@ -1,14 +1,17 @@
+import { useTranslation } from 'react-i18next'
 import './Techs.css'
 import React from 'react'
 
 function Techs(props, ref) {
+    //Translation
+    const { t } = useTranslation()
+
     return (
         <section className='techs' ref={ref}>
             <div className='techs__container'>
-                <h2 className='techs__title'>Технологии</h2>
-                <h3 className='techs__subtitle'>7 технологий</h3>
-                <p className='techs__brief'>На курсе веб-разработки мы освоили технологии, которые применили
-                    в дипломном проекте.</p>
+                <h2 className='techs__title'>{t('techs.title')}</h2>
+                <h3 className='techs__subtitle'>{t('techs.subtitle')}</h3>
+                <p className='techs__brief'>{t('techs.brief')}</p>
                 <ul className='techs__list'>
                     <li className='techs__list-item'>HTML</li>
                     <li className='techs__list-item'>CSS</li>

@@ -13,6 +13,7 @@ import mainApi from '../../utils/MainApi';
 import React from 'react';
 import Preloader from '../Preloader/Preloader';
 import InfoToolTip from '../InfoToolTip/InfoToolTip';
+import { useTranslation } from 'react-i18next';
 
 function App() {
   const history = useNavigate()
@@ -22,6 +23,9 @@ function App() {
   const [savedMoviesList, setSavedMoviesList] = React.useState([])
   const [isLoader, setIsLoader] = React.useState(false)
   const [isInfoTooltip, setIsInfoTooltip] = React.useState({ isOpen: false, successful: true, text: '' });
+
+  //Translation
+  const { t } = useTranslation()
 
   //  Закрыть окно с информацией
   function closeInfoTooltip() {
@@ -62,7 +66,7 @@ function App() {
           setIsInfoTooltip({
             isOpen: true,
             successful: true,
-            text: 'Добро пожаловать!',
+            text: t('form.registerTitle'),
           });
         }
       })
@@ -94,7 +98,7 @@ function App() {
         setIsInfoTooltip({
           isOpen: true,
           successful: true,
-          text: 'Ваши данные обновлены!',
+          text: t('profile.success'),
         });
       })
       .catch(err =>

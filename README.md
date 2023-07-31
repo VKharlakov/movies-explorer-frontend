@@ -28,14 +28,12 @@
 * Реализован **фильтр** короткометражных фильмов
 * Запоминание состояния полей ввода (в форме поиска фильмов), фильтра и найденных фильмов (при обновлении страницы данные не будут утеряны)
 * Поиск фильмов как на русском, так и английском языке
-* Реализован **попап** для демонтрации ошибок сервера или некорректных введённых данных
+* Реализован **попап** для демонстрации ошибок сервера или некорректных введённых данных
 * При загрузке данных показывается прелоадер. По окончанию загрузки он скрывается
 * Полноценый **респонсив** для всех популярных разрешений экрана
 * Бургерное меню для мобильной и планшетной версии
-* Реализовано закрытие попапа и бургерного меню по **оверлею** или по клавише **Esc**
 * Переход к показу трейлера фильма при нажатии на постер
 * Показ данных о фильме при наведении курсора на постер
-* Все нужные кнопки подсвечиваются **outline**, им привязанно невидимое, но слышимое описание, для людей с **ограниченными** возможностями
 * Приложение свёрстано по **BEM(БЭМ)**, соблюдается **семантичность**
 * На странице поиска фильмов по клику на кнопку **"Ещё"** - показываются дополнительные фильмы (на роуте с сохранёнными фильмами показываются сразу **все** фильмы)
 * Утилитарные функции, константы, функции обращения к серверу вынесены в отдельный файл
@@ -115,16 +113,13 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
 * A preloader is shown during data loading. It disappears after loading is complete
 * Full **responsive** design for all popular screen resolutions
 * Burger menu for mobile and tablet versions
-* Implemented closing of the popup and burger menu by clicking on the **overlay** or pressing the **Esc** key
 * Clicking on a movie poster leads to displaying the movie trailer
 * Displaying movie data when hovering over the movie poster
-* All necessary buttons are highlighted with **outline**, and invisible but audible descriptions are attached for people with **disabilities**
 * The application is styled using **BEM** methodology, and **semantic** correctness is observed
 * On the movie search page, clicking the **"More"** button shows additional movies (on the saved movies route, **all** movies are shown immediately)
 * Utility functions, constants, and server request functions are placed in separate files
 * Server requests are written using **OOP** paradigm
 * Ability to edit user profile (email and name)
-* Remembering user login **state** (automatic login on page refresh)
 * Micro-animations for all links and buttons are implemented
 * **Flex** and **grid** are used for creating grids
 * All data is stored on the server, using both third-party and custom APIs

@@ -1,9 +1,9 @@
-# **RU** -> тут(#ru)
-# **ENG** -> here(#eng)
+**RU** -> [тут](#ru)
+**ENG** -> [here](#eng)
+### RU
 # ***Проект Movies-explorer (фронтенд)***
 Проект является **дипломной работой** на курсе веб-разработчик ***Яндекс.Практикума***.
 ## *Описание*
-----
 ### ***О чём проект?***
 
 Данное вэб-приложение является сайтом-портфолио и мини-кинопоиском, открывающимся после регистрации.
@@ -19,7 +19,6 @@
   + Портфолио (часть проектов)
 * Поисковик фильмов с возможностью сохранения их к себе в коллекцию
 
----
 ## *Функциональность:*
 * Защищённость роутов (нельзя перейти к приложению-поисковику, если не выполнен вход)
 * Реализована "живая" **валидация** всех форм/полей ввода с использованием регулярных выражений и сторонних библиотек
@@ -47,7 +46,6 @@
 * Для создания сеток используется **flex** и **grid**
 * Все данные хранятся на сервере, использовано сторонее и собственное API
 
----
 ## *Используемые технологии:*
 
 * React
@@ -55,7 +53,6 @@
 * HTML 5
 * CSS 3
 * Express.js
----
 ## *Директории:*
 
 `/components` — папка с фунциональными компонентами
@@ -70,13 +67,11 @@
 
 `/utils` — папка с файлами, требуемых для работы сервиса (утилитарные функции, запросы к серверу, константы)
 
----
 ## *Запуск проекта:*
 `npm i` — установка зависимостей
 
 `npm run start` — запускает приложение
 
----
 ## *Ссылки:*
 
 * Домен по которому доступно приложение [https://bitfilms.kharlakov.nomoreparties.sbs](https://bitfilms.kharlakov.nomoreparties.sbs)
@@ -85,13 +80,12 @@
 * Публичный IP адрес сервера `51.250.17.137`
 * Ссылка на индивидульный [макет](https://www.figma.com/file/4I2m9DT4420OCcwEC9pUcB/Diploma-(Copy)?type=design&node-id=344-0&t=hdnoh8KNPpp4oHDY-0), по которому верстался проект
 
-# **ENG**
+### ENG
 ## ***Project Movies Explorer (frontend)***
 
 The project is a **graduation work** for the web developer course at ***Yandex.Practicum***.
 
 ### *Description*
-----
 
 #### ***What is the project about?***
 
@@ -108,7 +102,6 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
   + Portfolio (part of the projects)
 * A movie search engine with the ability to save movies to the user's collection
 
----
 ## *Functionality:*
 * Protected routes (cannot access the movie search app without logging in)
 * Implemented "live" **validation** for all forms/input fields using regular expressions and third-party libraries
@@ -136,7 +129,6 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
 * **Flex** and **grid** are used for creating grids
 * All data is stored on the server, using both third-party and custom APIs
 
----
 ## *Technologies used:*
 
 * React
@@ -145,7 +137,6 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
 * CSS 3
 * Express.js
 
----
 ## *Directories:*
 
 `/components` — folder with functional components
@@ -160,14 +151,12 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
 
 `/utils` — folder with files required for the service to work (utility functions, server requests, constants)
 
----
 ## *Project setup:*
 
 `npm i` — install dependencies
 
 `npm run start` — start the application
 
----
 ## *Links:*
 
 * Domain for accessing the application [https://bitfilms.kharlakov.nomoreparties.sbs](https://bitfilms.kharlakov.nomoreparties.sbs)

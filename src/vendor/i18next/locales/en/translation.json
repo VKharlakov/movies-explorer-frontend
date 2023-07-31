@@ -65,7 +65,8 @@
         "title": "Portfolio",
         "static": "Static page",
         "adaptive": "Adaptive page",
-        "spa": "Single page application"
+        "spa": "Single page application",
+        "guildverse": "Pet project: GuildVerse (WIP)"
     },
     "promo": {
         "title": "Web development student's diploma project."

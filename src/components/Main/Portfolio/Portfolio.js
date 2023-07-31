@@ -21,6 +21,10 @@ function Portfolio() {
                     <p className='portfolio__link-name'>{t('portfolio.spa')}</p>
                     <figure className='portfolio__link-icon'/>
                 </a>
+                <a className='portfolio__link' href='https://github.com/VKharlakov/guild-roster-manager' target='_blank' rel='noreferrer'>
+                    <p className='portfolio__link-name'>{t('portfolio.guildverse')}</p>
+                    <figure className='portfolio__link-icon'/>
+                </a>
             </div>
         </section>
     )

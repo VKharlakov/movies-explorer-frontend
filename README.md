@@ -1,9 +1,9 @@
-# **RU** -> тут(#ru)
-# **ENG** -> here(#eng)
+**RU** -> [тут](#ru)
+**ENG** -> [here](#eng)
+### RU
 # ***Проект Movies-explorer (фронтенд)***
 Проект является **дипломной работой** на курсе веб-разработчик ***Яндекс.Практикума***.
 ## *Описание*
-----
 ### ***О чём проект?***
 
 Данное вэб-приложение является сайтом-портфолио и мини-кинопоиском, открывающимся после регистрации.
@@ -19,7 +19,6 @@
   + Портфолио (часть проектов)
 * Поисковик фильмов с возможностью сохранения их к себе в коллекцию
 
----
 ## *Функциональность:*
 * Защищённость роутов (нельзя перейти к приложению-поисковику, если не выполнен вход)
 * Реализована "живая" **валидация** всех форм/полей ввода с использованием регулярных выражений и сторонних библиотек
@@ -29,14 +28,12 @@
 * Реализован **фильтр** короткометражных фильмов
 * Запоминание состояния полей ввода (в форме поиска фильмов), фильтра и найденных фильмов (при обновлении страницы данные не будут утеряны)
 * Поиск фильмов как на русском, так и английском языке
-* Реализован **попап** для демонтрации ошибок сервера или некорректных введённых данных
+* Реализован **попап** для демонстрации ошибок сервера или некорректных введённых данных
 * При загрузке данных показывается прелоадер. По окончанию загрузки он скрывается
 * Полноценый **респонсив** для всех популярных разрешений экрана
 * Бургерное меню для мобильной и планшетной версии
-* Реализовано закрытие попапа и бургерного меню по **оверлею** или по клавише **Esc**
 * Переход к показу трейлера фильма при нажатии на постер
 * Показ данных о фильме при наведении курсора на постер
-* Все нужные кнопки подсвечиваются **outline**, им привязанно невидимое, но слышимое описание, для людей с **ограниченными** возможностями
 * Приложение свёрстано по **BEM(БЭМ)**, соблюдается **семантичность**
 * На странице поиска фильмов по клику на кнопку **"Ещё"** - показываются дополнительные фильмы (на роуте с сохранёнными фильмами показываются сразу **все** фильмы)
 * Утилитарные функции, константы, функции обращения к серверу вынесены в отдельный файл
@@ -47,7 +44,6 @@
 * Для создания сеток используется **flex** и **grid**
 * Все данные хранятся на сервере, использовано сторонее и собственное API
 
----
 ## *Используемые технологии:*
 
 * React
@@ -55,7 +51,7 @@
 * HTML 5
 * CSS 3
 * Express.js
----
+* 
 ## *Директории:*
 
 `/components` — папка с фунциональными компонентами
@@ -70,13 +66,13 @@
 
 `/utils` — папка с файлами, требуемых для работы сервиса (утилитарные функции, запросы к серверу, константы)
 
----
+
 ## *Запуск проекта:*
 `npm i` — установка зависимостей
 
 `npm run start` — запускает приложение
 
----
+
 ## *Ссылки:*
 
 * Домен по которому доступно приложение [https://bitfilms.kharlakov.nomoreparties.sbs](https://bitfilms.kharlakov.nomoreparties.sbs)
@@ -85,13 +81,12 @@
 * Публичный IP адрес сервера `51.250.17.137`
 * Ссылка на индивидульный [макет](https://www.figma.com/file/4I2m9DT4420OCcwEC9pUcB/Diploma-(Copy)?type=design&node-id=344-0&t=hdnoh8KNPpp4oHDY-0), по которому верстался проект
 
-# **ENG**
+### ENG
 ## ***Project Movies Explorer (frontend)***
 
 The project is a **graduation work** for the web developer course at ***Yandex.Practicum***.
 
 ### *Description*
-----
 
 #### ***What is the project about?***
 
@@ -108,7 +103,6 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
   + Portfolio (part of the projects)
 * A movie search engine with the ability to save movies to the user's collection
 
----
 ## *Functionality:*
 * Protected routes (cannot access the movie search app without logging in)
 * Implemented "live" **validation** for all forms/input fields using regular expressions and third-party libraries
@@ -122,21 +116,17 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
 * A preloader is shown during data loading. It disappears after loading is complete
 * Full **responsive** design for all popular screen resolutions
 * Burger menu for mobile and tablet versions
-* Implemented closing of the popup and burger menu by clicking on the **overlay** or pressing the **Esc** key
 * Clicking on a movie poster leads to displaying the movie trailer
 * Displaying movie data when hovering over the movie poster
-* All necessary buttons are highlighted with **outline**, and invisible but audible descriptions are attached for people with **disabilities**
 * The application is styled using **BEM** methodology, and **semantic** correctness is observed
 * On the movie search page, clicking the **"More"** button shows additional movies (on the saved movies route, **all** movies are shown immediately)
 * Utility functions, constants, and server request functions are placed in separate files
 * Server requests are written using **OOP** paradigm
 * Ability to edit user profile (email and name)
-* Remembering user login **state** (automatic login on page refresh)
 * Micro-animations for all links and buttons are implemented
 * **Flex** and **grid** are used for creating grids
 * All data is stored on the server, using both third-party and custom APIs
 
----
 ## *Technologies used:*
 
 * React
@@ -145,7 +135,6 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
 * CSS 3
 * Express.js
 
----
 ## *Directories:*
 
 `/components` — folder with functional components
@@ -160,14 +149,12 @@ The backend part of the project is located [here](https://github.com/VKharlakov/
 
 `/utils` — folder with files required for the service to work (utility functions, server requests, constants)
 
----
 ## *Project setup:*
 
 `npm i` — install dependencies
 
 `npm run start` — start the application
 
----
 ## *Links:*
 
 * Domain for accessing the application [https://bitfilms.kharlakov.nomoreparties.sbs](https://bitfilms.kharlakov.nomoreparties.sbs)
